@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url("img/city.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: white;
+}
+
+.logo {
+    width: 400px;
+    height: 400px;
+    background-image: url("./img/logo-face-white.svg");
+    background-size: cover;
+}
+
+.container-blue-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(28,44,56,1);
+    color: rgb(228, 179, 101);
+    height: 400px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container-blue-one::before
+{
+    content: "";
+    height: 200px;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.2);
+    transform: rotate(45deg);
+    z-index: 1;
+    position: absolute;
+}
+.container-blue-one::after
+{
+    content: "";
+    height: 200px;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.1);
+    transform: rotate(45deg);
+    z-index: 1;
+    position: absolute;
+    left: 15vw;
+}
+
+.container-blue-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(28,44,56,1);
+    color: rgb(228, 179, 101);
+    height: 400px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container-blue-two::before
+{
+    content: "";
+    height: 200px;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.2);
+    transform: rotate(-45deg);
+    z-index: 1;
+    position: absolute;
+}
+.container-blue-two::after
+{
+    content: "";
+    height: 100px;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.1);
+    transform: rotate(-45deg);
+    z-index: 1;
+    position: absolute;
+    left: 30vw;
+}
+
+.container-white {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: rgba(28,44,56,1);
+    height: 300px;
+    margin-top: 50px;
+}
+
+.text-box {
+    width: 200px;
+    margin: 20px;
+    z-index: 2;
+}
+
+.text-box > h1 {
+    
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.image-box {
+    height: 300px;
+    margin: 20px;
+    z-index: 2;
+}
+
+.image-box > img {
+    height: 100%;
+    display: block;
+}
+
+.row {
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+    font-size: 24px;
+}
+
+@media (max-width: 600px) {
+    .container-blue {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .container-blue > .box {
+        text-align: center;
+    }
+}
